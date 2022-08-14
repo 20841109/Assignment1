@@ -1,0 +1,36 @@
+class TaskList extends React.Component {
+
+  
+  static get defaultProps() {
+    return { heading: 'Untitled task list' };
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = { name: '' };
+  }
+
+  
+
+  render() {
+    
+  const props = this.props;
+
+  const MyArray= props.myTasks;
+
+  const onNameChange = (event) => {
+    this.setState({ name: event.target.value });
+ };
+
+    const element = (
+      <div>
+        <h1>{ props.heading }</h1>
+        <input type="text" value={this.state.name} onChange={onNameChange} />
+        
+
+        <ul>{ MyArray.map(task => <Task key={task.id} {...task} />) }</ul>
+      </div>
+    );
+    return element;
+  }
+}
