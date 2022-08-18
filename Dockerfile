@@ -39,5 +39,5 @@ RUN chown -R node:node /app /deps \
 USER node
 
 # Start the server on exposed port 3000.
-EXPOSE 3000
+EXPOSE 4548
 CMD [ "npm", "start" ]
