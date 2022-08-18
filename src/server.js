@@ -10,7 +10,7 @@ require('babel-core/register');
 const app = require('./app');
 
 // Start the server and wait for connections
-const server = app.listen(3000, () => {
+const server = app.listen(4548, () => {
   console.log('Server started.');
 });
 
